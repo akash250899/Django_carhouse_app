@@ -1,0 +1,19 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}
+CarHouse | Admin Panel
+{% endblock title %}
+
+{% block branding %}
+<h1 id="head">
+    <a href="{% url 'home'%}">
+        <img src="{% static 'img/logos/black-logo.png' %}" alt="logo" class="brand_img" height="50px" width="300px">
+    </a>
+</h1>
+{% endblock branding %}
+
+{% block extrastyle %}
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" >
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock extrastyle %}

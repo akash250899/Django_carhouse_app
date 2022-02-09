@@ -1,0 +1,259 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Sub banner start -->
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1>Team Details</h1>
+            <ul class="breadcrumbs">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="active">Team Details</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sub Banner end -->
+
+<!-- Team page start -->
+<div class="team-page content-area-5">
+    <div class="container">
+        <!-- Heading -->
+        <h1 class="heading-2">Team Details</h1>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row team-2 mb-50">
+                    <div class="col-xl-4 col-lg-5 col-md-4 col-sm-12 col-pad ">
+                        <div class="photo">
+                            <img src="{{ member.photo.url }}" alt="avatar-9" class="img-fluid">
+                            <div class="social-list clearfix">
+                                <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
+                                <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
+                                <a href="#" class="google-bg"><i class="fa fa-google"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-7 col-md-8 col-sm-12 col-pad align-self-center bg">
+                        <div class="detail">
+                            <h4>
+                                <a href="{% url 'team_detail' member.id %}">{{ member.first_name }} {{ member.last_name }}</a>
+                            </h4>
+                            <h5>{{ member.designation }}</h5>
+                            <div class="contact">
+                                <ul>
+                                    <li>
+                                        <i class="flaticon-pin"></i><a>44 New Design Street,</a>
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-mail"></i><a href="mailto:info@themevessel.com">info@themevessel.com</a>
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-phone"></i><a href="tel:+554XX-634-7071"> +55 4XX-634-7071</a>
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-fax"></i><a href="#"> +0477 85X6 552</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="agent-biography">
+                    <h3 class="heading-2">Biography</h3>
+                    <p class="mb-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Vestibulum vel mauris et odio lobortis laoreet eget eu magna. Proin mauris erat, luctus at nulla ut, lobortis mattis magna. Morbi a arcu lacus. Maecenas tristique velit vitae nisi consectetur, in mattis diam sodales. Mauris sagittis sem mattis justo bibendum, a eleifend dolor facilisis. Mauris nec pharetra tortor, ac aliquam felis. Nunc pretium erat sed quam consectetur fringilla. Aliquam ultricies nunc porta metus interdum mollis. Donec porttitor libero augue, vehicula tincidunt lectus placerat a. Sed tincidunt dolor non sem dictum dignissim. Nulla vulputate orci felis, ac ornare purus ultricies a. Fusce euismod magna orci, sit amet aliquam turpis dignissim ac. </p>
+                    <h3 class="heading-2">Working Experience</h3>
+                    <div class="agent-experience">
+                        <i class="fa fa-check-square-o"></i>
+                        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt. Aliquam erat volutpat. Curabitur convallis</P>
+                    </div>
+                    <div class="agent-experience mb-50">
+                        <i class="fa fa-check-square-o"></i>
+                        <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt. Aliquam erat volutpat. Curabitur convallis</P>
+                    </div>
+                    <h3 class="heading-2">Review</h3>
+                    
+                    <div class="row rating-area">
+                        <div class="col-lg-4 col-md-4">
+                            <div class="average-rating mb-30">
+                                <h1>4.8</h1>
+                                <div class="ratings mb-10">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <h4>452 Review</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8">
+                            <div class="rating-details mb-30">
+                                <div class="rating-item">
+                                    <div class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <div class="rating-width" data-width="75%" style="width: 80%;"></div>
+                                    </div>
+                                    <div class="rating-count">
+                                        <span>(80)</span>
+                                    </div>
+                                </div>
+                                <div class="rating-item">
+                                    <div class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <div class="rating-width" data-width="25%" style="width: 60%;"></div>
+                                    </div>
+                                    <div class="rating-count">
+                                        <span>(60)</span>
+                                    </div>
+                                </div>
+                                <div class="rating-item">
+                                    <div class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <div class="rating-width" data-width="8%" style="width: 40%;"></div>
+                                    </div>
+                                    <div class="rating-count">
+                                        <span>(40)</span>
+                                    </div>
+                                </div>
+                                <div class="rating-item">
+                                    <div class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <div class="rating-width" data-width="0" style="width: 20%;"></div>
+                                    </div>
+                                    <div class="rating-count">
+                                        <span>(20)</span>
+                                    </div>
+                                </div>
+                                <div class="rating-item mb-0">
+                                    <div class="ratings">
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <div class="rating-width" data-width="0" style="width: 0px;"></div>
+                                    </div>
+                                    <div class="rating-count">
+                                        <span>(0)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Comments start -->
+                    <h3 class="heading-2">Comments</h3>
+                    <ul class="comments">
+                        <li>
+                            <div class="comment">
+                                <div class="comment-author">
+                                    <a href="#">
+                                        <img src="img/avatar/avatar-1.jpg" alt="comments-user">
+                                    </a>
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-meta">
+                                        <h6>
+                                            Maikel Alisa
+                                            <span class="float-right">11/28/2019<a href="#">Reply</a></span>
+                                        </h6>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tincidunt aliquam. Aliquam gravida massa at sem vulputate interdum et vel eros. Maecenas eros enim  sem vulputate interdum et vel eros.</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="comment mb-50">
+                                        <div class="comment-author">
+                                            <a href="#">
+                                                <img src="img/avatar/avatar-2.jpg" alt="comments-user">
+                                            </a>
+                                        </div>
+                                        <div class="comment-content">
+                                            <div class="comment-meta">
+                                                <h6>
+                                                    Carolyn Stone
+                                                    <span class="float-right">11/28/2019<a href="#">Reply</a></span>
+                                                </h6>
+                                            </div>
+                                            <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus tincidunt aliquam. Aliquam gravida.</P>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar-right">
+                    <div class="best-team widget">
+                        <h3 class="sidebar-title">Best Team</h3>
+                        {% for member in best_employees %}
+                        <div class="media mb-2">
+                            <a class="pr-3" href="{% url 'team_detail' member.id %}">
+                                <img src="{{ member.photo.url }}" alt="testimonial-2">
+                            </a>
+                            <div class="media-body align-self-center">
+                                <h5>
+                                    <a href="{% url 'team_detail' member.id %}">{{ member.first_name }} {{ member.last_name }}</a>
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <i class="flaticon-mail"></i><a href="mailto:info@themevessel.com">info@themevessel.com</a>
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-phone"></i><a href="tel:+554XX-634-7071"> +55 4XX-634-7071</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <!-- Contact 2 start -->
+                    <div class="contact-2 widget widget-3">
+                        <h3 class="sidebar-title">Contact for any Inquiry</h3>
+                        <form action="#" method="GET" enctype="multipart/form-data">
+                            <div class="rowo">
+                                <div class="form-group name">
+                                    <input type="text" name="name" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="form-group email">
+                                    <input type="email" name="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group number">
+                                    <input type="text" name="phone" class="form-control" placeholder="Phone">
+                                </div>
+                                <div class="form-group message">
+                                    <textarea class="form-control" name="message" placeholder="Write message"></textarea>
+                                </div>
+                                <div class="send-btn">
+                                    <button type="submit" class="btn btn-md button-theme btn-block">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team page end -->
+
+{% endblock content %}
